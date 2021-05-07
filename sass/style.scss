@@ -1,0 +1,52 @@
+$pr-color: #00c1ff;
+
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	background-color: #fff;
+
+	&.no-scroll {
+		padding-right: 17px;
+		overflow-y: hidden;
+	}
+}
+
+h1,
+h2 {
+	font-weight: 300;
+}
+
+.search-result__header {
+	h2 {
+		margin-bottom: 30px;
+	}
+}
+
+@media (min-width: 576px) {
+	.search-result__header {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@import './grid/grid';
+@import './header/header';
+@import './navbar/navbar';
+@import './main/main';
+@import './form/form';
+@import './courses/courses';
+@import './button/button';
+@import './search/search';
+
+@import './footer/footer';

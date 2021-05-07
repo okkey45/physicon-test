@@ -1,0 +1,152 @@
+/* $green: #4cd964;
+$red: #ff3b30; */
+
+.choose-price__form {
+	position: relative;
+	width: 160px;
+	height: 35px;
+}
+.switch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/* margin: -30px 0 0 -75px; */
+	/* background: $green; */
+	background: rgb(76, 217, 100);
+	background: -o-linear-gradient(
+		left,
+		rgba(76, 217, 100, 1) 0%,
+		rgba(76, 217, 100, 1) 50%,
+		rgba(0, 193, 255, 1) 51%,
+		rgba(0, 193, 255, 1) 100%
+	);
+	background: -webkit-gradient(
+		linear,
+		left top, right top,
+		from(rgba(76, 217, 100, 1)),
+		color-stop(50%, rgba(76, 217, 100, 1)),
+		color-stop(51%, rgba(0, 193, 255, 1)),
+		to(rgba(0, 193, 255, 1))
+	);
+	background: linear-gradient(
+		to right,
+		rgba(76, 217, 100, 1) 0%,
+		rgba(76, 217, 100, 1) 50%,
+		rgba(0, 193, 255, 1) 51%,
+		rgba(0, 193, 255, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cd964', endColorstr='#00c1ff',GradientType=1 );
+
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	border-radius: 6px;
+
+	span {
+		display: none !important;
+		position: absolute;
+		width: 20px;
+		height: 4px;
+		top: 50%;
+		left: 50%;
+		margin: -2px 0px 0px -4px;
+		background: white;
+		display: block;
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		border-radius: 20px;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 12px;
+			margin-top: -8px;
+			background: white;
+			-webkit-transition: all 0.2s ease;
+			-o-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+			border-radius: 20px;
+		}
+	}
+}
+
+input[type='radio'] {
+	display: none;
+}
+
+.switch label {
+	cursor: pointer;
+	color: rgba(41, 112, 58, 0.65);
+	width: 60px;
+	line-height: 35px;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+label[for='priceRub'] {
+	position: absolute;
+	left: 10px;
+}
+
+label[for='priceBonus'] {
+	position: absolute;
+	right: 10px;
+}
+
+#priceBonus:checked ~ .switch {
+	/* background: $red; */
+	background: rgb(0, 193, 255);
+	background: -o-linear-gradient(
+		left,
+		rgba(0, 193, 255, 1) 0%,
+		rgba(0, 193, 255, 1) 49%,
+		rgba(76, 217, 100, 1) 50%,
+		rgba(76, 217, 100, 1) 100%
+	);
+	background: -webkit-gradient(
+		linear,
+		left top, right top,
+		from(rgba(0, 193, 255, 1)),
+		color-stop(49%, rgba(0, 193, 255, 1)),
+		color-stop(50%, rgba(76, 217, 100, 1)),
+		to(rgba(76, 217, 100, 1))
+	);
+	background: linear-gradient(
+		to right,
+		rgba(0, 193, 255, 1) 0%,
+		rgba(0, 193, 255, 1) 49%,
+		rgba(76, 217, 100, 1) 50%,
+		rgba(76, 217, 100, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c1ff', endColorstr='#4cd964',GradientType=1 );
+}
+
+#priceBonus:checked ~ .switch span {
+	background: white;
+	margin-left: -8px;
+
+	&:after {
+		background: white;
+		height: 20px;
+		margin-top: -8px;
+		margin-left: 8px;
+	}
+}
+
+#priceRub:checked ~ .switch label[for='priceRub'] {
+	color: white;
+}
+
+#priceBonus:checked ~ .switch label[for='priceBonus'] {
+	color: white;
+}

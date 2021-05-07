@@ -1,0 +1,16 @@
+.btn {
+	width: 100%;
+	padding: 0.1rem 0.75rem;
+	font-size: 14px;
+	border-radius: 6px;
+
+	&-primary {
+		background-color: $pr-color;
+		border-color: $pr-color;
+
+		&:hover {
+			background-color: #00aee6;
+			border-color: #00aee6;
+		}
+	}
+}
